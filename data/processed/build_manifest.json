@@ -1,0 +1,8 @@
+{
+  "model_name": "BAAI/bge-m3",
+  "last_build": "2026-04-14T08:13:21.750306+00:00",
+  "total_chunks": 76,
+  "processed_files": {
+    "videos.json": "sha256:45b8d2bb717468849da1e847b61a72ba53d81313af143ecea739099fec7fc8a8"
+  }
+}

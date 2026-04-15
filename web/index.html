@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M365 Video Assistant</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </div>
+      <div>
+        <h1>M365 Video Assistant</h1>
+        <p class="subtitle">Hỏi đáp về Microsoft 365 dựa trên video hướng dẫn</p>
+      </div>
+    </header>
+
+    <div class="chat-container" id="chatContainer">
+      <div class="welcome-msg">
+        <div class="welcome-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <h2>Xin chào!</h2>
+        <p>Tôi có thể giúp bạn tìm hiểu về Teams, Outlook, OneDrive và các công cụ Microsoft 365 khác.</p>
+        <div class="suggestions">
+          <button class="suggestion" onclick="askSuggestion(this)">Làm sao để đặt lịch họp trên Teams?</button>
+          <button class="suggestion" onclick="askSuggestion(this)">Cách chia sẻ file OneDrive cho đồng nghiệp?</button>
+          <button class="suggestion" onclick="askSuggestion(this)">Hướng dẫn cài đặt Authenticator?</button>
+          <button class="suggestion" onclick="askSuggestion(this)">Cách thu hồi quyền truy cập file đã chia sẻ?</button>
+          <button class="suggestion" onclick="askSuggestion(this)">Đồng bộ OneDrive với máy tính như thế nào?</button>
+          <button class="suggestion" onclick="askSuggestion(this)">Cách tạo nhóm Teams mới?</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-area">
+      <div class="input-wrapper">
+        <textarea
+          id="userInput"
+          placeholder="Nhập câu hỏi của bạn..."
+          rows="1"
+          autofocus
+        ></textarea>
+        <button id="sendBtn" onclick="sendMessage()" title="Gửi">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
